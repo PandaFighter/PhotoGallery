@@ -1,0 +1,55 @@
+﻿@model EPAM.WebGallery.Site.Models.AlbumViewModel
+@{
+	ViewBag.Title = "Album";
+	var ajaxOptions = new AjaxOptions
+	{
+		UpdateTargetId = "update",
+		LoadingElementId = "loading",
+		Url = Url.Action("AddPhoto")
+	};
+}
+<h2>
+	<a href="@Url.Action("Index")"><i class="m-icon-big-swapleft"></i></a>
+	<span class="light">@Model.Name</span>
+</h2>
+<span class="offset1 light">-@Model.Description</span>
+<div>
+	<a id="btnaddphoto" class="m-btn blue brand" style="z-index: 0"><i class="icon-plus"></i>Add Photo</a>
+</div>
+<br />
+<div id="formaddphoto" style="display: none">
+	@using (Html.BeginForm("AddPhoto", "Gallery", new { album = Model.Name }, FormMethod.Post, new {id = "ImgForm", enctype = "multipart/form-data", name = "ImgForm"}))
+	{
+		
+		<div>
+			Choose new image :
+			<input type="file" name="Image" class="" />
+		</div>
+		<div></div>
+		
+	}
+	<input type="button" value="Save" class="m-btn green" onclick=" Up(); " /><br/><br/><br/>
+</div>	
+
+<div id="update">
+	@Html.Action("Photos", new {album = Model.Name})
+</div>
+<script type="text/javascript">
+	$('#btnaddphoto').click(function() {
+		$('#formaddphoto').toggle(200);
+	});
+
+	function Up() {
+		$('#ImgForm').submit();
+	}
+
+	function ShowResults() {
+		$.ajax({
+			cache: false,
+			type: "GET",
+			url: '@Url.Action("ShowUploadImage")',
+			dataType: "html"
+		});
+	}
+
+</script>

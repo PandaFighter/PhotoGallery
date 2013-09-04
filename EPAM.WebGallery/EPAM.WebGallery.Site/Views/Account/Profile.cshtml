@@ -1,0 +1,50 @@
+﻿@model EPAM.WebGallery.Model.Profile
+@{
+    ViewBag.Title = "Profile";
+	int i = 1;
+}
+
+<h2></h2>
+<div>
+	<div id="header">
+		<h2>@GlobalRes.YourProfile</h2>
+	</div>
+	<div id="container" class="span6">
+		@using (Html.BeginForm())
+		{
+			<table class="table table-condensed">
+				<tr>
+					<td class="span1">@(i++).</td>
+					<td class="span2">@Html.LabelFor(model => model.FirstName)</td>
+					<td>@Html.TextBoxFor(model => model.FirstName, new {@class = "m-wrap"})</td>
+				</tr>
+				<tr>
+					<td class="span1">@(i++).</td>			
+					<td class="span2">@Html.LabelFor(model => model.LastName)</td>
+					<td>@Html.TextBoxFor(model => model.LastName, new {@class = "m-wrap"})</td>
+				</tr>
+				<tr>
+					<td class="span1">@(i++).</td>		
+					<td class="span2">@Html.LabelFor(model => model.Email)</td>
+					<td>@Html.TextBoxFor(model => model.Age, new {@class = "m-wrap"})</td>
+				</tr>
+				<tr>
+					<td class="span1">@(i++).</td>		
+					<td class="span2">@Html.LabelFor(model => model.Age)</td>
+					<td>@Html.TextBoxFor(model => model.Age, new {@class = "m-wrap"})</td>
+				</tr>
+				<tr>
+					<td class="span1">@(i++).</td>		
+					<td class="span2">@Html.LabelFor(model => model.City)</td>
+					<td>@Html.TextBoxFor(model => model.Age, new {@class = "m-wrap"})</td>
+				</tr>
+				<tr>
+					<td class="span1">@(i++).</td>		
+					<td class="span2">@Html.LabelFor(model => model.PhoneNumber)</td>
+					<td>@Html.TextBoxFor(model => model.Age, new {@class = "m-wrap"})</td>
+				</tr>
+			</table>
+			<a type="button" class="m-btn blue brand"><i class="icon-share-alt icon-white"></i></a>
+		}
+	</div>
+</div>

@@ -1,0 +1,26 @@
+﻿@model IEnumerable<EPAM.WebGallery.Site.Models.UserViewModel>
+@{
+	ViewBag.Title = "Contents";
+	int i = 0;
+}
+
+<h3>
+	<a href="@Url.Action("Index", "Home")"><i class="m-icon-big-swapleft"></i></a>
+	<span class="light">All users in our Gallery! </span>
+</h3>
+<div>
+	<div id="header">
+	</div>
+	<div id="container">
+		@foreach(var user in Model)
+  {
+			<div class="span1 offset1">
+
+				<blockquote>
+					<p style="font-size: 25px; font-family: Segoe UI Light">@Html.ActionLink(user.Login, "Albums", "Heap", new { login = user.Login }, null)</p>
+				</blockquote>
+
+			</div>
+  }
+	</div>
+</div>

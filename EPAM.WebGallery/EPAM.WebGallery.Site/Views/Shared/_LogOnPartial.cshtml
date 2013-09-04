@@ -1,0 +1,21 @@
+﻿@if(Context.User != null && User.Identity.IsAuthenticated )
+{
+	<div class="m-btn-group">
+		<a class="m-btn blue"><i class="icon-cog icon-white"></i>@User.Identity.Name</a>
+		<a class="m-btn blue dropdown-carettoggle" data-toggle="dropdown" href="#">
+			<span class="caret white"></span>
+		</a>
+		<ul class="m-dropdown-menu">
+			<li><a href="#"><i class="icon-user"></i>@GlobalRes.EditProfile</a></li>
+			<li><a href="@Url.Action("Profile","Account")"><i class="icon-th-list"></i>@GlobalRes.ViewProfile</a></li>
+			<li><a href="#"><i class="icon-question-sign"></i>@GlobalRes.Help</a></li>
+			<li class="divider"></li>
+			<li><a href="@Url.Action("SignOut", "Account")"><i class="icon-off"></i>@GlobalRes.SignOut</a></li>
+		</ul>
+	</div>
+}
+else
+{
+	<a href="#" class="m-btn blue-stripe brand" id="btnLogin">@GlobalRes.SignIn</a>
+	@Html.ActionLink(@GlobalRes.Register, "Register", "Account", null, new { @class = "m-btn blue-strip brand" })
+}

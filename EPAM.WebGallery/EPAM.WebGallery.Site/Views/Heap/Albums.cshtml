@@ -1,0 +1,23 @@
+﻿@model EPAM.WebGallery.Site.Models.AlbumListViewModel
+@{
+	ViewBag.Title = "Albums";
+}
+
+@if(Model.UserLogin != null)
+{
+	<h2>
+		<a href="@Url.Action("Index")" class=""><i class="m-icon-big-swapleft"></i></a>
+		<span class="light">@Model.UserLogin albums!</span>
+	</h2>
+}
+
+<div class="offset1">
+	@foreach(var album in Model.Albums)
+ {
+		<blockquote class="">
+			<p class="light">@Html.ActionLink(album.Name, "Photos", "Heap", new { albumName = album.Name, login = Model.UserLogin }, null)</p>
+			<small>@album.Description</small>
+		</blockquote>
+		
+ }
+</div>

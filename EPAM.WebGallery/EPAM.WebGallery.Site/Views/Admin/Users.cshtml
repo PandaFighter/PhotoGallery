@@ -1,0 +1,49 @@
+﻿@model IEnumerable<EPAM.WebGallery.Site.Models.UserViewModel>
+@{
+    Layout = null;
+	int i = 0;
+}
+
+@if (TempData["message"] != null)
+{
+	@TempData["message"]
+}
+<div id="update">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Login</th>
+				<th>Password</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var user in Model)
+			{
+				if (user.Login.Equals("admin"))
+				{
+					<tr class="error">
+						<td>@(i++)</td>		
+						<td>@Html.ActionLink(user.Login,"Edit", new {userLogin = user.Login})</td> 
+						<td>@user.Password</td>
+						<td>@user.Email</td>
+						<td></td>
+					</tr>		
+				}
+				else
+				{
+					<tr class="info">
+						<td>@(i++)</td>		
+						<td>@Html.ActionLink(user.Login,"Edit", new {userLogin = user.Login})</td>
+						<td>@user.Password</td>	
+						<td>@user.Email</td>
+						<td>@Ajax.ActionLink("Delete","Delete", new {id = user.Id}, new AjaxOptions(){UpdateTargetId = "update", LoadingElementId = "loading"})</td>
+					</tr>					
+				}		
+			}
+		</tbody>
+	</table>
+</div>
+<div id="loading" style="display: none">
+	<img src="~/Content/images/loading.gif"/>
+</div>

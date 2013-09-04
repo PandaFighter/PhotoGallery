@@ -1,0 +1,33 @@
+﻿@model EPAM.WebGallery.Site.Models.RegisterModel
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Registration</h2>
+@if (TempData["message"] != null)
+{
+	@TempData["message"]
+}
+@using (Html.BeginForm())
+{
+	@Html.ValidationSummary()
+	<table>
+		<tr>
+			<td>@GlobalRes.Login</td>
+			<td>@Html.TextBoxFor(model => model.Login, new {@class = "m-wrap"})</td>
+		</tr>
+		<tr>
+			<td>@GlobalRes.Email</td>
+			<td>@Html.TextBoxFor(model => model.Email, new {@class = "m-wrap"})</td>
+		</tr>
+		<tr>
+			<td>@GlobalRes.Password</td>
+			<td>@Html.TextBoxFor(model => model.Password, new {@class = "m-wrap"})</td>
+		</tr>
+		<tr>
+			<td>@GlobalRes.Confirm @GlobalRes.Password</td>
+			<td>@Html.TextBoxFor(model => model.ConfirmPassword, new {@class = "m-wrap"})</td>
+		</tr>
+	</table>
+	<input type="submit" name="Submit" value="@GlobalRes.Submit" class="m-btn green"/>
+}

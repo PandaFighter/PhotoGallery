@@ -1,0 +1,29 @@
+﻿@model EPAM.WebGallery.Site.Models.SignInModel
+@{
+    ViewBag.Title = "SignIn";
+}
+
+<h2>Enter</h2>
+<p>
+	Please, enter your login and password. @Html.ActionLink("Register","Register"), if you don't have account
+</p>
+
+@using (Html.BeginForm())
+{
+	@Html.ValidationSummary()
+	<div class="navbar-form">
+	    <table>
+	        <tr>
+	            <td>@GlobalRes.Login</td>
+	            <td>@Html.TextBoxFor(model => model.Login)</td>
+	            <td>@Html.ValidationMessageFor(model => model.Login)</td>
+	        </tr>
+	        <tr>
+	            <td>@GlobalRes.Password</td>
+	            <td>@Html.TextBoxFor(model=>model.Password)</td>
+	            <td>@Html.ValidationMessageFor(model => model.Password)</td>
+	        </tr>
+	    </table>
+		<input type="submit" class="btn"/>
+	</div>
+}

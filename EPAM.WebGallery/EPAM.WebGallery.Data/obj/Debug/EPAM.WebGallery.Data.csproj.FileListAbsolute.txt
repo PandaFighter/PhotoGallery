@@ -1,0 +1,28 @@
+C:\Users\Borya\Documents\Visual Studio 2012\Projects\EPAM.WebGallery\EPAM.WebGallery.Data\bin\Debug\EPAM.WebGallery.Data.dll
+C:\Users\Borya\Documents\Visual Studio 2012\Projects\EPAM.WebGallery\EPAM.WebGallery.Data\bin\Debug\EPAM.WebGallery.Data.pdb
+C:\Users\Borya\Documents\Visual Studio 2012\Projects\EPAM.WebGallery\EPAM.WebGallery.Data\bin\Debug\EPAM.WebGallery.Model.dll
+C:\Users\Borya\Documents\Visual Studio 2012\Projects\EPAM.WebGallery\EPAM.WebGallery.Data\bin\Debug\EPAM.WebGallery.Model.pdb
+C:\Users\Borya\Documents\Visual Studio 2012\Projects\EPAM.WebGallery\EPAM.WebGallery.Data\obj\Debug\EPAM.WebGallery.Data.csprojResolveAssemblyReference.cache
+C:\Users\Borya\Documents\Visual Studio 2012\Projects\EPAM.WebGallery\EPAM.WebGallery.Data\obj\Debug\EPAM.WebGallery.Data.dll
+C:\Users\Borya\Documents\Visual Studio 2012\Projects\EPAM.WebGallery\EPAM.WebGallery.Data\obj\Debug\EPAM.WebGallery.Data.pdb
+E:\EPAM.WebGallery\EPAM.WebGallery.Data\bin\Debug\EPAM.WebGallery.Data.dll
+E:\EPAM.WebGallery\EPAM.WebGallery.Data\bin\Debug\EPAM.WebGallery.Data.pdb
+E:\EPAM.WebGallery\EPAM.WebGallery.Data\bin\Debug\EPAM.WebGallery.Model.dll
+E:\EPAM.WebGallery\EPAM.WebGallery.Data\bin\Debug\EPAM.WebGallery.Model.pdb
+E:\EPAM.WebGallery\EPAM.WebGallery.Data\obj\Debug\EPAM.WebGallery.Data.csprojResolveAssemblyReference.cache
+E:\EPAM.WebGallery\EPAM.WebGallery.Data\obj\Debug\EPAM.WebGallery.Data.dll
+E:\EPAM.WebGallery\EPAM.WebGallery.Data\obj\Debug\EPAM.WebGallery.Data.pdb
+H:\EPAM.WebGallery\EPAM.WebGallery.Data\bin\Debug\EPAM.WebGallery.Data.dll
+H:\EPAM.WebGallery\EPAM.WebGallery.Data\bin\Debug\EPAM.WebGallery.Data.pdb
+H:\EPAM.WebGallery\EPAM.WebGallery.Data\bin\Debug\EPAM.WebGallery.Model.dll
+H:\EPAM.WebGallery\EPAM.WebGallery.Data\bin\Debug\EPAM.WebGallery.Model.pdb
+H:\EPAM.WebGallery\EPAM.WebGallery.Data\obj\Debug\EPAM.WebGallery.Data.csprojResolveAssemblyReference.cache
+H:\EPAM.WebGallery\EPAM.WebGallery.Data\obj\Debug\EPAM.WebGallery.Data.dll
+H:\EPAM.WebGallery\EPAM.WebGallery.Data\obj\Debug\EPAM.WebGallery.Data.pdb
+D:\Boris_Gerlovski\Projects\EPAM.WebGallery\EPAM.WebGallery.Data\bin\Debug\EPAM.WebGallery.Data.dll
+D:\Boris_Gerlovski\Projects\EPAM.WebGallery\EPAM.WebGallery.Data\bin\Debug\EPAM.WebGallery.Data.pdb
+D:\Boris_Gerlovski\Projects\EPAM.WebGallery\EPAM.WebGallery.Data\bin\Debug\EPAM.WebGallery.Model.dll
+D:\Boris_Gerlovski\Projects\EPAM.WebGallery\EPAM.WebGallery.Data\bin\Debug\EPAM.WebGallery.Model.pdb
+D:\Boris_Gerlovski\Projects\EPAM.WebGallery\EPAM.WebGallery.Data\obj\Debug\EPAM.WebGallery.Data.csprojResolveAssemblyReference.cache
+D:\Boris_Gerlovski\Projects\EPAM.WebGallery\EPAM.WebGallery.Data\obj\Debug\EPAM.WebGallery.Data.dll
+D:\Boris_Gerlovski\Projects\EPAM.WebGallery\EPAM.WebGallery.Data\obj\Debug\EPAM.WebGallery.Data.pdb

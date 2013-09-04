@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4E6643AD-650D-4B1F-9AB2-DBD0E77037B6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EPAM.WebGallery.Services</RootNamespace>
+    <AssemblyName>EPAM.WebGallery.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.3.0.2-unstable-9\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseService.cs" />
+    <Compile Include="ContentService.cs" />
+    <Compile Include="MembershipService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EPAM.WebGallery.Common\EPAM.WebGallery.Common.csproj">
+      <Project>{9ad2b945-c2e1-4bb6-bd72-a5ef880b0f2f}</Project>
+      <Name>EPAM.WebGallery.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EPAM.WebGallery.Data.EF\EPAM.WebGallery.Data.EF.csproj">
+      <Project>{58b8d349-5577-4e40-8073-1fd5aa31f289}</Project>
+      <Name>EPAM.WebGallery.Data.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EPAM.WebGallery.Data\EPAM.WebGallery.Data.csproj">
+      <Project>{9163dfb2-b46f-4e03-9cf5-bd0086eac734}</Project>
+      <Name>EPAM.WebGallery.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EPAM.WebGallery.Model\EPAM.WebGallery.Model.csproj">
+      <Project>{29762e35-0ac8-4129-819d-fb2de8b60bdf}</Project>
+      <Name>EPAM.WebGallery.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EPAM.WeGallery.Contracts\EPAM.WebGallery.Contracts.csproj">
+      <Project>{0528ceae-bfed-4697-933c-c3b24bd30a09}</Project>
+      <Name>EPAM.WebGallery.Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

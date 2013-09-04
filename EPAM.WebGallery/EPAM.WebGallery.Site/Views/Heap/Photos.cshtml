@@ -1,0 +1,26 @@
+﻿@model EPAM.WebGallery.Site.Models.PhotoListViewModel
+@{
+	ViewBag.Title = "Photos";
+}
+
+<h2>
+	<a href="@Url.Action("Albums",new{login = Model.UserName})"><i class="m-icon-big-swapleft"></i></a>
+	<span class="light">@Model.UserName photos from @Model.AlbumName)</span>
+</h2>
+<div>
+	<ul class="thumbnails">
+		@foreach(var photo in Model.Photos)
+		{
+			<li class="span2">
+				<div>
+					<a class="thumbnail" onclick="ShowCarousel();">
+						<img src="@photo.Image"/>
+					</a>
+					<div>
+						<a href="@Url.Action("", "Contents", new { id = photo.Id })" class="icon-heart"></a>
+					</div>
+				</div>
+			</li>
+		}
+	</ul>
+</div>

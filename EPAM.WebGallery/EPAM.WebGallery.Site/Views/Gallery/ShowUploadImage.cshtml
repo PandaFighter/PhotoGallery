@@ -1,0 +1,15 @@
+﻿@model string[]
+@{
+	Layout = null;
+}
+
+<ul class="thumbnails">
+	@foreach(var image in Model)
+ {
+		<li class="span2">
+			<a class="thumbnail">
+				<img src="@image">
+			</a>
+		</li>
+ }
+</ul>

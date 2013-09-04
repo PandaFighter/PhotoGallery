@@ -1,0 +1,9 @@
+﻿@model bool
+@{
+    Layout = null;
+}
+
+@if (Model == true)
+{
+	@Html.ActionLink("Admin", "Index", "Admin", null, new { @class = "m-btn purple brand" })
+}

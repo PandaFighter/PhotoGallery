@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ADE1753C-98E5-4096-BF4A-8154887693DE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EPAM.WebGallery.Authentication</RootNamespace>
+    <AssemblyName>EPAM.WebGallery.Authentication</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuthHttpModule.cs" />
+    <Compile Include="CustomAuthentication.cs" />
+    <Compile Include="IAuthentication.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserIdentity.cs" />
+    <Compile Include="UserProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EPAM.WebGallery.Data\EPAM.WebGallery.Data.csproj">
+      <Project>{9163dfb2-b46f-4e03-9cf5-bd0086eac734}</Project>
+      <Name>EPAM.WebGallery.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EPAM.WebGallery.Model\EPAM.WebGallery.Model.csproj">
+      <Project>{29762e35-0ac8-4129-819d-fb2de8b60bdf}</Project>
+      <Name>EPAM.WebGallery.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EPAM.WebGallery.Services\EPAM.WebGallery.Services.csproj">
+      <Project>{4e6643ad-650d-4b1f-9ab2-dbd0e77037b6}</Project>
+      <Name>EPAM.WebGallery.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EPAM.WeGallery.Contracts\EPAM.WebGallery.Contracts.csproj">
+      <Project>{0528ceae-bfed-4697-933c-c3b24bd30a09}</Project>
+      <Name>EPAM.WebGallery.Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,24 @@
+﻿@model EPAM.WebGallery.Site.Models.UserViewModel
+@{
+    Layout = null;
+}
+
+@if (TempData["message"] != null)
+{
+    @TempData["message"]
+}
+<div>
+    @foreach (var album in Model.Albums)
+    {
+        <div class="span4">
+            <h3>@Html.ActionLink(album.Name, "Album", "Gallery", new { name = album.Name }, new { @class = "light" })</h3>
+            @Html.ActionLink("Edit", "EditAlbum", new { id = album.Id }) |
+        @Ajax.ActionLink("Delete", "DeleteAlbum", new { id = album.Id },
+                         new AjaxOptions()
+                         {
+                             UpdateTargetId = "update",
+                             LoadingElementId = "loading"
+                         })
+        </div>
+    }
+</div>

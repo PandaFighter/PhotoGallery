@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<div class="span5">
+	<h4>@GlobalRes.MesHomePage</h4>
+</div>
+<div>
+	<div><img src="~/Content/images/Cosmos.jpg"/></div>
+	<div class="span5">
+		@GlobalRes.MesRegOffer @Html.ActionLink(GlobalRes.MesRegistered,"Register","Account",null, new {@class="btn-link"})
+	</div>
+</div>

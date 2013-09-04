@@ -1,0 +1,66 @@
+﻿@model EPAM.WebGallery.Site.Models.PhotoViewModel
+@{
+	ViewBag.Title = "Edit page";
+	int i = 0;
+	var ajaxOptions = new AjaxOptions
+	{
+		UpdateTargetId = "update",
+		LoadingElementId = "loading",
+		Url = Url.Action("EditPhoto", "Gallery")
+	};
+}
+<div id="loading" style="display: none">
+	<img src="~/Content/images/loading.gif"/>
+</div>
+<div id="update">
+	<h2>
+		
+		<span class="light">Edit page</span>
+	</h2>
+	<div>
+		<ul class="thumbnails">
+			<li id="img" class="span5">
+				<img src="@Model.Image" class="thumbnail"/>
+			</li>
+		</ul>
+
+	    <form id="sendform">
+	        <table>
+	            <tr style="display: none">
+	                <td class="span1">@(i++).</td>
+	                <td class="span1">Id</td>
+	                <td>@Html.TextBoxFor(model => model.Id, new {@class = "m-wrap"})</td>
+	            </tr>				
+	            <tr>
+	                <td class="span1">@(i++).</td>
+	                <td class="span1">Name</td>
+	                <td>@Html.TextBoxFor(model => model.Name, new {@class = "m-wrap", id = "Name"})</td>
+	            </tr>
+	            <tr>
+	                <td class="span1">@(i++).</td>
+	                <td class="span2">Description</td>
+	                <td>@Html.TextBoxFor(model => model.Description, new {@class = "m-wrap", id = "Description"})</td>			
+	            </tr>
+	            <tr>
+	                <td class="span1">@(i++).</td>
+	                <td class="span1">Tag</td>
+	                <td>@Html.TextBoxFor(model => model.Tag, new {@class = "m-wrap", id = "Name"})</td>
+	            </tr>		
+	        </table>
+			
+	    </form>
+        <input type="submit" class="m-btn green" value="Save" onclick="Send()"/>
+	</div>
+</div>
+<script type="text/javascript">
+    function Upload() {
+        
+	}
+
+    function Send(e) {
+        e.preventDefault();
+		$.post("/Gallery/EditPhoto", $("#sendform").serialize(), function(response) {
+		    $("#update").load(response.url);
+		});
+	}
+</script>

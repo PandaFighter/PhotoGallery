@@ -1,0 +1,52 @@
+﻿@model EPAM.WebGallery.Site.Models.UserViewModel
+@{
+	ViewBag.Title = "Edit page";
+	int i = 0;
+	AjaxOptions ajaxOptions = new AjaxOptions() {
+		UpdateTargetId = "update",
+		Url = Url.Action("Edit"),
+		LoadingElementId = "loading"
+	};
+}
+<div id="update">
+	<h1>Edit page</h1>
+	<div>
+		@using (Ajax.BeginForm(ajaxOptions))
+		{
+
+			<table>
+				<tr>
+					<td class="span1">@(i++).</td>
+					<td class="span1">Id</td>
+					<td>@Html.TextBoxFor(model => model.Id, new { @class = "m-wrap", @readonly = true })</td>
+				</tr>				
+				<tr>
+					<td class="span1">@(i++).</td>
+					<td class="span1">Login</td>
+					<td>@Html.TextBoxFor(model => model.Login, new {@class = "m-wrap"})</td>
+				</tr>
+				<tr>
+					<td class="span1">@(i++).</td>
+					<td class="span2">Password</td>
+					<td>@Html.TextBoxFor(model => model.Password, new {@class = "m-wrap"})</td>			
+				</tr>
+				<tr>
+					<td class="span1">@(i++).</td>
+					<td class="span2">Email</td>
+					<td>@Html.TextBoxFor(model => model.Email, new {@class = "m-wrap"})</td>				
+				</tr>
+				<tr>
+					<td class="span1">@(i++).</td>
+					<td class="span2">Albums</td>
+					<td>@Html.ActionLink("Albums","Index","Gallery")				
+				</tr>			
+			</table>
+			<input type="submit" class="m-btn green" value="Save"/>
+		}
+
+	</div>
+	<div id="loading" style="display: none">
+		<img src="~/Content/images/loading.gif"/>
+	</div>
+</div>
+

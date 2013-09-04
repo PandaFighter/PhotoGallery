@@ -1,0 +1,56 @@
+﻿@model EPAM.WebGallery.Site.Models.UserViewModel
+@{
+	ViewBag.Title = "Show";
+	var ajaxOptions = new AjaxOptions
+	{
+		UpdateTargetId = "update",
+		LoadingElementId = "loading",
+		Url = Url.Action("CreateAlbum")
+	};
+}
+
+<div id="main">
+	<div id="header">
+		<h2>
+			<a href="@Url.Action("Index", "Home")"><i class="m-icon-big-swapleft"></i></a>
+			<span class="light">Albums</span>
+		</h2>
+		<div>
+			<a id="btncreate" class="m-btn blue brand lightmin"><i class="icon-plus"></i>Create album</a>
+		</div>
+	</div>
+	<div id="createform" style="display: none">
+		<div id="title">
+			<h3 class="light">Create new Album!</h3>
+		</div>
+		<div id="form">
+			@using (Ajax.BeginForm(ajaxOptions))
+			{
+				<table>
+					<tr>
+						<td class="span2">Album name</td>
+						<td>@Html.TextBox("Name", null, new {@class = "m-wrap", id = "tbxname"})</td>
+					</tr>
+					<tr>
+						<td class="span2">Description</td>
+						<td>@Html.TextArea("Description", null, new {@class = "m-wrap", id = "areadescr"})</td>
+					</tr>
+				</table>
+				<input type="submit" class="m-btn green" value="Confirm" />
+			}
+		</div>
+	</div>
+	<div id="update">
+		@Html.Action("Albums")
+	</div>
+</div>
+<div id="loading" style="display: none">
+	<img src="~/Content/images/loading.gif" />
+</div>
+<script type="text/javascript">
+	$('#btncreate').click(function() {
+		$('#createform').toggle(300);
+		$('#tbxname').val('');
+		$('#areadescr').val('');
+	});
+</script>

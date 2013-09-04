@@ -1,0 +1,21 @@
+C:\Users\Borya\Documents\Visual Studio 2012\Projects\EPAM.WebGallery\EPAM.WebGallery.Common\bin\Debug\EPAM.WebGallery.Common.dll
+C:\Users\Borya\Documents\Visual Studio 2012\Projects\EPAM.WebGallery\EPAM.WebGallery.Common\bin\Debug\EPAM.WebGallery.Common.pdb
+C:\Users\Borya\Documents\Visual Studio 2012\Projects\EPAM.WebGallery\EPAM.WebGallery.Common\bin\Debug\NLog.dll
+C:\Users\Borya\Documents\Visual Studio 2012\Projects\EPAM.WebGallery\EPAM.WebGallery.Common\bin\Debug\NLog.xml
+C:\Users\Borya\Documents\Visual Studio 2012\Projects\EPAM.WebGallery\EPAM.WebGallery.Common\obj\Debug\EPAM.WebGallery.Common.csprojResolveAssemblyReference.cache
+C:\Users\Borya\Documents\Visual Studio 2012\Projects\EPAM.WebGallery\EPAM.WebGallery.Common\obj\Debug\EPAM.WebGallery.Common.dll
+C:\Users\Borya\Documents\Visual Studio 2012\Projects\EPAM.WebGallery\EPAM.WebGallery.Common\obj\Debug\EPAM.WebGallery.Common.pdb
+E:\EPAM.WebGallery\EPAM.WebGallery.Common\bin\Debug\EPAM.WebGallery.Common.dll
+E:\EPAM.WebGallery\EPAM.WebGallery.Common\bin\Debug\EPAM.WebGallery.Common.pdb
+E:\EPAM.WebGallery\EPAM.WebGallery.Common\bin\Debug\NLog.dll
+E:\EPAM.WebGallery\EPAM.WebGallery.Common\bin\Debug\NLog.xml
+E:\EPAM.WebGallery\EPAM.WebGallery.Common\obj\Debug\EPAM.WebGallery.Common.csprojResolveAssemblyReference.cache
+E:\EPAM.WebGallery\EPAM.WebGallery.Common\obj\Debug\EPAM.WebGallery.Common.dll
+E:\EPAM.WebGallery\EPAM.WebGallery.Common\obj\Debug\EPAM.WebGallery.Common.pdb
+H:\EPAM.WebGallery\EPAM.WebGallery.Common\bin\Debug\EPAM.WebGallery.Common.dll
+H:\EPAM.WebGallery\EPAM.WebGallery.Common\bin\Debug\EPAM.WebGallery.Common.pdb
+H:\EPAM.WebGallery\EPAM.WebGallery.Common\bin\Debug\NLog.dll
+H:\EPAM.WebGallery\EPAM.WebGallery.Common\bin\Debug\NLog.xml
+H:\EPAM.WebGallery\EPAM.WebGallery.Common\obj\Debug\EPAM.WebGallery.Common.csprojResolveAssemblyReference.cache
+H:\EPAM.WebGallery\EPAM.WebGallery.Common\obj\Debug\EPAM.WebGallery.Common.dll
+H:\EPAM.WebGallery\EPAM.WebGallery.Common\obj\Debug\EPAM.WebGallery.Common.pdb
