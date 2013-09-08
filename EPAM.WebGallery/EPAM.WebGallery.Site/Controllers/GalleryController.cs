@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,7 @@ using System.Web.UI;
 using EPAM.WebGallery.Common;
 using EPAM.WebGallery.Contracts.Exceptions;
 using EPAM.WebGallery.Data.EF;
+using EPAM.WebGallery.Helpers;
 using EPAM.WebGallery.Model;
 using EPAM.WebGallery.Services;
 using EPAM.WebGallery.Site.Helpers;
@@ -16,7 +18,7 @@ using EPAM.WebGallery.Site.Models;
 namespace EPAM.WebGallery.Site.Controllers
 {
 
-	//[OutputCache( Duration = 3600)]
+	
 	public class GalleryController : BaseController
 	{
 		private static readonly HashSet<byte[]> Images = new HashSet<byte[]>();
@@ -44,7 +46,7 @@ namespace EPAM.WebGallery.Site.Controllers
 
 		public ActionResult Albums()
 		{
-			Response.Cache.SetCacheability(HttpCacheability.Public);
+			//Response.Cache.SetCacheability(HttpCacheability.Public);
 			string login = User.Identity.Name;
 			User user = MembershipService.GetUserByLogin(login);
 			UserViewModel userViewModel = UserBuilder.ConvertToViewModel(user);
@@ -150,10 +152,11 @@ namespace EPAM.WebGallery.Site.Controllers
 		
 			if (image != null)
 			{
-				photo.Name = image.FileName;
 				photo.Image = new byte[image.ContentLength];
-				photo.ImageType = image.ContentType;
 				image.InputStream.Read(photo.Image, 0, image.ContentLength);
+				photo.ImagePreview = PreviewCreator.CreatePreview(image.InputStream, new Size(200, 200));
+				photo.Name = image.FileName;
+				photo.ImageType = image.ContentType;
 				ContentService.CreateNewPhoto(photo, album, User.Identity.Name);
 			}
 			return RedirectToAction("Album", new {name = album});

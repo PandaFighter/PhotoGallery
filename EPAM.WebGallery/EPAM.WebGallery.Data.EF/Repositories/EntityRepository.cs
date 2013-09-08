@@ -21,11 +21,11 @@ namespace EPAM.WebGallery.Data.EF.Repositories
 		public EntityRepository(UnitOfWork unitOfWork)
 		{
 			this.Context = unitOfWork.Context;
-			//_context.Roles.AddOrUpdate(role => role.Name,
-			//			   new Role {Name = Role.Names.Administrator},
-			//			   new Role {Name = Role.Names.Membership},
-			//			   new Role {Name = Role.Names.Moderator});
-			//_context.SaveChanges();
+			/*Context.Roles.AddOrUpdate(role => role.Name,
+						   new Role { Name = Role.Names.Administrator },
+						   new Role { Name = Role.Names.Membership },
+						   new Role { Name = Role.Names.Moderator });
+			Context.SaveChanges();*/
 		}
 
 		public EntityRepository()

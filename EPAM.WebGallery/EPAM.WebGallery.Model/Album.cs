@@ -14,6 +14,9 @@ namespace EPAM.WebGallery.Model
 
 		public virtual User User { get; set; }
 
+		//new
+		public Guid UserId { get; set; }
+
 		public DateTime? CreatedDate { get; set; }
 		public DateTime? DeletedDate { get; set; }
 		public DateTime? ChangedDate { get; set; }

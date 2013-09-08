@@ -47,12 +47,6 @@ namespace EPAM.WebGallery.Services
 			}
 		}
 
-		public IEnumerable<Album> GetAllAlbum()
-		{
-			var albums = AlbumRepository.GetAll();
-			return albums;
-		}
-
 		public Album GetAlbumByName(string login, string albumName)
 		{
 			Expect.ArgumentNotNull(login);
@@ -76,12 +70,10 @@ namespace EPAM.WebGallery.Services
 			}
 			catch (Exception)
 			{
-				
 				throw;
 			}
 			return AlbumRepository.GetById(id);
 		}
-
 
 
 		public IEnumerable<Album> GetAllUserAlbum(string login)
@@ -97,6 +89,12 @@ namespace EPAM.WebGallery.Services
 		{
 			Expect.ArgumentNotNull(album);
 			AlbumRepository.Update(album);
+		}
+
+		public IEnumerable<Album> GetAllAlbum()
+		{
+			IEnumerable<Album> albums = AlbumRepository.GetAll();
+			return albums;
 		}
 
 		public Album CreateNewAlbum(string userName, string albumName, string description = "")
@@ -116,7 +114,7 @@ namespace EPAM.WebGallery.Services
 			return album;
 		}
 
-		#endregion 
+		#endregion
 
 		#region PhotoService
 
@@ -125,7 +123,7 @@ namespace EPAM.WebGallery.Services
 			Expect.ArgumentNotNull(photo);
 			Expect.ArgumentNotNull(albumName);
 			Expect.ArgumentNotNull(login);
-		    var service = new MembershipService(UnitOfWork);
+			var service = new MembershipService(UnitOfWork);
 			User user = service.GetUserByLogin(login);
 			Album album = user.Albums.FirstOrDefault(x => x.Name == albumName);
 			if (album != null)
@@ -133,11 +131,7 @@ namespace EPAM.WebGallery.Services
 				album.Photos.Add(photo);
 				photo.Album = album;
 			}
-		   // UnitOfWork.Commit();
-		    service.UpdateUser(user);
-		    //var album = GetAlbumByName(login, albumName);
-		    //album.Photos.Add(photo);
-		    //UpdateAlbum(album);
+			service.UpdateUser(user);
 		}
 
 		public Photo GetPhotoById(Guid id)

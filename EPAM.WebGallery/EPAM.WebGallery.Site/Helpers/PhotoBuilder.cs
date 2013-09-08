@@ -28,6 +28,7 @@ namespace EPAM.WebGallery.Site.Helpers
 				{
 					Description = photo.Desription,
 					Image = "data:image/png;base64," + Convert.ToBase64String(photo.Image.ToArray()),
+					ImagePreview = "data:image/png;base64," + Convert.ToBase64String(photo.ImagePreview.ToArray()), 
 					Name = photo.Name,
 					Id = photo.Id
 				};

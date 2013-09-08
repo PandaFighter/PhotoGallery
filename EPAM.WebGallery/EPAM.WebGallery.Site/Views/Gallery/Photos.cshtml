@@ -15,7 +15,7 @@
 		<li class="span2">
 			<div>
 				<a class="thumbnail" onclick="ShowCarousel();">
-					<img src="@photo.Image"/>
+					<img src="@photo.ImagePreview"/>
 				</a>
 				<div>
 					<a href="@Url.Action("EditPhoto", "Gallery", new { id = photo.Id })" class="icon-edit"></a>
@@ -42,7 +42,7 @@
 				<div class="item">
 					<input type="button" class="m-btn black"  value="X" onclick="CloseCarousel();"/>
 					
-					<img src="@photo.Image" class="thumbnail"/>
+					<img src="@photo.ImagePreview" class="thumbnail"/>
 					<div class="carousel-caption">
 						<h4>@photo.Name</h4>
 						<p>"@photo.Description"</p>

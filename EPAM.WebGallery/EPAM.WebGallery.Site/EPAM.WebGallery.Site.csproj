@@ -322,6 +322,10 @@
       <Project>{9163dfb2-b46f-4e03-9cf5-bd0086eac734}</Project>
       <Name>EPAM.WebGallery.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\EPAM.WebGallery.Helpers\EPAM.WebGallery.Helpers.csproj">
+      <Project>{156288be-83d1-44f6-918d-cc6f6ad503e7}</Project>
+      <Name>EPAM.WebGallery.Helpers</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EPAM.WebGallery.Model\EPAM.WebGallery.Model.csproj">
       <Project>{29762e35-0ac8-4129-819d-fb2de8b60bdf}</Project>
       <Name>EPAM.WebGallery.Model</Name>

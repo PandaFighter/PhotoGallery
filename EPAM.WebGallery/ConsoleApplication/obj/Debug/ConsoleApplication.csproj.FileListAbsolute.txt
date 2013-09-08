@@ -18,3 +18,23 @@ E:\EPAM.WebGallery\ConsoleApplication\bin\Debug\EPAM.WebGallery.Model.pdb
 E:\EPAM.WebGallery\ConsoleApplication\bin\Debug\EPAM.WebGallery.Services.pdb
 E:\EPAM.WebGallery\ConsoleApplication\bin\Debug\EPAM.WebGallery.Contracts.pdb
 E:\EPAM.WebGallery\ConsoleApplication\bin\Debug\EntityFramework.xml
+C:\Users\Borya\Documents\Visual Studio 2012\Projects\EPAM.WebGallery\ConsoleApplication\bin\Debug\ConsoleApplication.exe.config
+C:\Users\Borya\Documents\Visual Studio 2012\Projects\EPAM.WebGallery\ConsoleApplication\obj\Debug\ConsoleApplication.exe
+C:\Users\Borya\Documents\Visual Studio 2012\Projects\EPAM.WebGallery\ConsoleApplication\obj\Debug\ConsoleApplication.pdb
+C:\Users\Borya\Documents\Visual Studio 2012\Projects\EPAM.WebGallery\ConsoleApplication\bin\Debug\ConsoleApplication.exe
+C:\Users\Borya\Documents\Visual Studio 2012\Projects\EPAM.WebGallery\ConsoleApplication\bin\Debug\ConsoleApplication.pdb
+C:\Users\Borya\Documents\Visual Studio 2012\Projects\EPAM.WebGallery\ConsoleApplication\bin\Debug\EPAM.WebGallery.Common.dll
+C:\Users\Borya\Documents\Visual Studio 2012\Projects\EPAM.WebGallery\ConsoleApplication\bin\Debug\EPAM.WebGallery.Contracts.dll
+C:\Users\Borya\Documents\Visual Studio 2012\Projects\EPAM.WebGallery\ConsoleApplication\bin\Debug\EPAM.WebGallery.Data.dll
+C:\Users\Borya\Documents\Visual Studio 2012\Projects\EPAM.WebGallery\ConsoleApplication\bin\Debug\EPAM.WebGallery.Data.EF.dll
+C:\Users\Borya\Documents\Visual Studio 2012\Projects\EPAM.WebGallery\ConsoleApplication\bin\Debug\EPAM.WebGallery.Model.dll
+C:\Users\Borya\Documents\Visual Studio 2012\Projects\EPAM.WebGallery\ConsoleApplication\bin\Debug\EPAM.WebGallery.Services.dll
+C:\Users\Borya\Documents\Visual Studio 2012\Projects\EPAM.WebGallery\ConsoleApplication\bin\Debug\EntityFramework.dll
+C:\Users\Borya\Documents\Visual Studio 2012\Projects\EPAM.WebGallery\ConsoleApplication\bin\Debug\EPAM.WebGallery.Common.pdb
+C:\Users\Borya\Documents\Visual Studio 2012\Projects\EPAM.WebGallery\ConsoleApplication\bin\Debug\EPAM.WebGallery.Data.EF.pdb
+C:\Users\Borya\Documents\Visual Studio 2012\Projects\EPAM.WebGallery\ConsoleApplication\bin\Debug\EPAM.WebGallery.Data.pdb
+C:\Users\Borya\Documents\Visual Studio 2012\Projects\EPAM.WebGallery\ConsoleApplication\bin\Debug\EPAM.WebGallery.Model.pdb
+C:\Users\Borya\Documents\Visual Studio 2012\Projects\EPAM.WebGallery\ConsoleApplication\bin\Debug\EPAM.WebGallery.Services.pdb
+C:\Users\Borya\Documents\Visual Studio 2012\Projects\EPAM.WebGallery\ConsoleApplication\bin\Debug\EPAM.WebGallery.Contracts.pdb
+C:\Users\Borya\Documents\Visual Studio 2012\Projects\EPAM.WebGallery\ConsoleApplication\bin\Debug\EntityFramework.xml
+C:\Users\Borya\Documents\Visual Studio 2012\Projects\EPAM.WebGallery\ConsoleApplication\obj\Debug\ConsoleApplication.csprojResolveAssemblyReference.cache

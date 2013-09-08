@@ -21,6 +21,8 @@ namespace EPAM.WebGallery.Site.Models
 
 		public string Image { get; set; }
 
+		public string ImagePreview { get; set; }
+
 		[HiddenInput(DisplayValue = false)]
 		public string ImageMimeType { get; set; }
 
